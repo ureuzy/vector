@@ -1,0 +1,11 @@
+sources:
+  nginx_logs:
+    type: file
+    include:
+      - "/logs/*.log"
+sinks:
+  vector:
+    type: vector
+    inputs:
+      - nginx_logs
+    address: "vector-server:6000"

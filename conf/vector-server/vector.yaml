@@ -1,0 +1,12 @@
+sources:
+  vector:
+    type: vector
+    address: "0.0.0.0:6000"
+sinks:
+  stdout:
+    type: console
+    inputs:
+      - vector
+    target: stdout
+    encoding:
+      codec: "text"
